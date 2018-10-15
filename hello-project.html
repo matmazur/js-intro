@@ -6,10 +6,11 @@
     <script type="text/javascript" src="scripts/js1.js"></script>
     <script type="text/javascript" src="scripts/adding-functions.js"></script>
     <script type="text/javascript" src="scripts/person.js"></script>
+    <script type="text/javascript" src="scripts/switch-case.js"></script>
 </head>
 
 <body>
-  
+
     <script>
         var tab = [1, 3, 5, 7, "billy", null, 9, [4, 7, 11, "block"]]
         console.log(tab);
@@ -26,8 +27,22 @@
         console.log(tab.concat(tabInTab));
 
 
+        console.log(tab);
+
+        if (tab.length > 5) {
+            console.log("Gesundheit!")
+        } else if (tab.length ==5) {
+            console.log("Mazeltov!")
+        } else {
+            console.log("Mesershmitt or whassisname")
+        }
+
+        
+        switchCase(0);
         
         
+        
+
         console.log("push with arg to place something on the end of array - pop to get last element and remove it");
         console.log("shift to get first elemenet and remove it - unshift to put something at index 0");
 
