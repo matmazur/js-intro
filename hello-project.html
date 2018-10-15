@@ -1,28 +1,37 @@
 <! doctype html>
 <html>
-    <head>
+
+<head>
     <script>
         function printHello() {
             console.log("HEllo world")
         }
     </script>
-
-
     <script type="text/javascript" src="scripts/js2.js"></script>
     <script type="text/javascript" src="scripts/js1.js"></script>
     <script type="text/javascript" src="scripts/adding-functions.js"></script>
+    <script type="text/javascript" src="scripts/person.js"></script>
 </head>
 
 <body>
     <h1>Hello Mike</h1>
 
+
+
     <script>
-        printHello();
+        var tab = [1, 3, 5, 7, "billy", null, 9, [4, 7, 11, "block"]]
+        console.log(tab);
+        
+        var tabInTab=tab[7];
+        console.log(tabInTab);
+        console.log("push with arg to place something on the end of array - pop to get last element and remove it" );
+        console.log("shift to get first elemenet and remove it - unshift to put something at index 0");
+        
+        
+        
+        
     </script>
 
-    <script type="text/javascript">
-        js1();
-    </script>
 
 </body>
 
