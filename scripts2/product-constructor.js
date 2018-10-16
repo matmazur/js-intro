@@ -6,4 +6,7 @@ function Product(name, price, category) {
     Product.prototype.toString = function () {
         return this.name + "-" + this.price;
     }
+    
+    
+    Product.prototype.country = "Germany";
 }

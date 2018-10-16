@@ -17,6 +17,21 @@
         console.log(prod1.toString() == prod2.toString());
         console.log(prod2.toString() == prod3.toString());
 
+
+
+        console.log(prod1.toString());
+        prod1.toString = function() {
+            return "2";
+        };
+        console.log(prod1.toString());
+        console.log(prod1.__proto__.toString());
+
+        console.log(prod1.country);
+        prod1.country = "Poland";
+        console.log(prod1.country);
+
+        console.log(prod1.__proto__.country);
+
     </script>
 
 </body>
