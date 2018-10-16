@@ -7,14 +7,31 @@
 
 <body>
     <script>
-        
-        var person = new Student("Mike","Broski",15);
-        
+        var person = new Student("Mike", "Broski", 15);
+
         console.log(person.fullName());
-        
-        
-        
-        
+        console.log(person.fullInfo());
+
+
+        var a = 5;
+        console.log(window.a);
+        console.log(this.a);
+
+
+
+
+        showA();
+
+        var showA = function() {
+            console.log(5);
+        }
+
+
+        showB();
+
+        function showB() {
+            console.log(7);
+        }
 
     </script>
 

@@ -7,8 +7,12 @@ Person.prototype.fullName = function () {
 }
 
 function Student(fn, ln, id) {
-   Person.call(this,fn,ln);
+    Person.call(this, fn, ln);
     this.id = id;
 }
 
-Student.prototype=Object.create(Person.prototype);
+Student.prototype = Object.create(Person.prototype);
+
+Student.prototype.fullInfo = function () {
+    return this.firstName + " " + this.lastName + " id: " + this.id;
+}
