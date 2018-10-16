@@ -3,40 +3,20 @@
 
 <head>
     <script src="scripts2/product-constructor.js" type="text/javascript"></script>
-    <script src="scripts2/calculator.js" type="text/javascript"></script>
 </head>
 
 <body>
     <script>
-        var product = {
-            name: "Chocolate",
-            price: 45.44,
-            categories: ["sweets", "snacks"],
-            producer: {
-                name: "Wawel",
-                address: "Cracov"
-            }
-        }
-        console.log(product);
+        var prod1 = new Product("chips", 43.3, "snacks");
+        var prod2 = new Product("chocolate", 13.3, "sweets");
+        var prod3 = new Product("chocolate", 13.3, "sweets");
 
-        var product1 = new Product("Chips", 43.3, "snacks");
-        product1.toString();
 
-        
-        var calc = new Calculator();
-        calc.sum(4,3);
-        
-        console.log(product1.name);
-        
-        product.additionalParameter = 5;
-        console.log(product);
-        
-        for (k in product){
-            console.log(k +" - " + product[k]);
-        }
-        
-        
-        
+
+        console.log(prod1.toString === prod2.toString);
+        console.log(prod1.toString() == prod2.toString());
+        console.log(prod2.toString() == prod3.toString());
+
     </script>
 
 </body>
