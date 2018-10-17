@@ -1,5 +1,5 @@
 {
-  "name": "jsintro",
+  "name": "js-intro",
   "homepage": "https://github.com/matmazur/js-intro",
   "authors": [
     "Bingo Bobo <matmazur90@gmail.com>"
@@ -13,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular": "^1.7.5"
+  }
 }
