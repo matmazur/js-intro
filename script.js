@@ -22,8 +22,6 @@ function changeHeadings() {
     sport.innerHTML = "Bad sport you are Ricky"
 }
 
-
-
 function addNews() {
     var ul = document.getElementById("news-list");
 
@@ -53,5 +51,4 @@ function registerEvents() {
     button.onclick = function () {
         addNews();
     }
-
 }

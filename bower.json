@@ -1,0 +1,17 @@
+{
+  "name": "jsintro",
+  "homepage": "https://github.com/matmazur/js-intro",
+  "authors": [
+    "Bingo Bobo <matmazur90@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
