@@ -1,15 +1,20 @@
 <!Doctype html>
-<html ng-app>
+<html ng-app="app">
 
 <head>
     <title>HELLO ANGULAR</title>
     <script type="application/javascript" src="js/lib/angular/angular.js"></script>
+    <script type="application/javascript" src="js/app/app.js"></script>
+
 </head>
 
 <body>
 
-    <h1>Some random text about stuff {{2+2}}</h1>
-        
-    </body>
+    <div ng-controller="helloController">
+        <h1>Some random text about stuff {{2+2}}</h1>
+        <p>{{hello}}</p>
+        <p>{{bye}}</p>
+    </div>
+</body>
 
 </html>
