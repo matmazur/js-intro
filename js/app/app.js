@@ -6,6 +6,7 @@ app.controller('helloController', function () {
     this.bye = "goodbye homie";
 });
 
+
 // can be written down as
 // 
 // app.controller('helloController',hello());
@@ -13,3 +14,13 @@ app.controller('helloController', function () {
 // function hello(){
 //this.hello = "hello darling";
 //}
+
+
+
+app.controller('clickController',function(){
+   this.header="starter header";
+    this.changeHeader = function(){
+        this.header=this.input;
+    }
+    
+});
