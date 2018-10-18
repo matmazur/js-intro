@@ -10,10 +10,10 @@
 
 <body>
 
-    <div ng-controller="helloController">
+    <div ng-controller="helloController as hello">
         <h1>Some random text about stuff {{2+2}}</h1>
-        <p>{{hello}}</p>
-        <p>{{bye}}</p>
+        <p>{{hello.hello}}</p>
+        <p>{{hello.bye}}</p>
     </div>
 </body>
 

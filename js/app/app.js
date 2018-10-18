@@ -1,9 +1,15 @@
 var app = angular.module('app', []);
 
 
+app.controller('helloController', function () {
+    this.hello = 'hello world from angular';
+    this.bye = "goodbye homie";
+});
 
-
-app.controller('helloController',["$scope", function ($scope) {
-    $scope.hello = 'hello world from angular';
-    $scope.bye = "goodbye homie";
-}]);
+// can be written down as
+// 
+// app.controller('helloController',hello());
+//
+// function hello(){
+//this.hello = "hello darling";
+//}
