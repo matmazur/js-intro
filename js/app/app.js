@@ -52,3 +52,31 @@ app.controller('MouseController', function () {
         console.log('Mouse over');
     }
 });
+
+
+app.controller("KeyController", function () {
+
+
+    this.up = 0;
+    this.down = 0;
+    this.press = 0;
+
+    this.keyUp = function () {
+        this.up++;
+        console.log("up");
+
+    }
+    this.keyDown = function () {
+        this.down++;
+        console.log("down");
+
+    }
+    this.keyPress = function () {
+        this.press++;
+        console.log("press");
+    }
+
+
+
+
+});
