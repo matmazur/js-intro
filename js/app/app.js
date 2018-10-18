@@ -18,15 +18,30 @@ app.controller('helloController', function () {
 
 
 app.controller('clickController', function () {
-    this.header = "starter header";
+
+
+    this.header = "Starter header";
     this.changeHeader = function () {
         this.header = this.input;
     }
-    this.capitalize = function () {
-        this.header = this.header.toUpperCase();
+
+
+
+    this.changeCapitalization = function () {
+
+        var character = this.header.charAt(0).toString();
+        var characterCapital = this.header.charAt(0).toString().toUpperCase();
+
+        console.log(character);
+        console.log(characterCapital);
+
+        character == characterCapital ?
+            this.header = this.header.toLowerCase() :
+            this.header = this.header.toUpperCase();
+
+
     }
-     this.unCapitalize = function () {
-        this.header = this.header.toLowerCase();
-    }
+
+
 
 });
