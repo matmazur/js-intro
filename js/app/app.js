@@ -17,10 +17,16 @@ app.controller('helloController', function () {
 
 
 
-app.controller('clickController',function(){
-   this.header="starter header";
-    this.changeHeader = function(){
-        this.header=this.input;
+app.controller('clickController', function () {
+    this.header = "starter header";
+    this.changeHeader = function () {
+        this.header = this.input;
     }
-    
+    this.capitalize = function () {
+        this.header = this.header.toUpperCase();
+    }
+     this.unCapitalize = function () {
+        this.header = this.header.toLowerCase();
+    }
+
 });

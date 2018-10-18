@@ -22,7 +22,10 @@
         <h2>angular events</h2>
         <input type="text" ng-model="click.input">
         <button type="button" ng-click="click.changeHeader()">change header</button>
-        <h2>{{click.header}}</h2>
+        <button type="button" ng-click="click.capitalize()">capitalize</button>
+        <button type="button" ng-click="click.unCapitalize()">un-capitalize</button>
+        
+        <h2 ng-dblclick="click.capitalize()">{{click.header}}</h2>
 
     </div>
 
