@@ -7,14 +7,6 @@ app.controller('helloController', function () {
 });
 
 
-// can be written down as
-// 
-// app.controller('helloController',hello());
-//
-// function hello(){
-//this.hello = "hello darling";
-//}
-
 
 
 app.controller('clickController', function () {
@@ -32,16 +24,31 @@ app.controller('clickController', function () {
         var character = this.header.charAt(0).toString();
         var characterCapital = this.header.charAt(0).toString().toUpperCase();
 
-        console.log(character);
-        console.log(characterCapital);
-
         character == characterCapital ?
             this.header = this.header.toLowerCase() :
             this.header = this.header.toUpperCase();
 
-
     }
+});
 
 
-
+app.controller('MouseController', function () {
+    this.mouseDown = function () {
+        console.log('Mouse down');
+    }
+    this.mouseUp = function () {
+        console.log('Mouse Up');
+    }
+    this.mouseEnter = function () {
+        console.log('Mouse enter');
+    }
+    this.mouseLeave = function () {
+        console.log('Mouse leave');
+    }
+    this.mouseMove = function () {
+        console.log('Mouse move');
+    }
+    this.mouseOver = function () {
+        console.log('Mouse over');
+    }
 });

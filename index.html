@@ -24,11 +24,20 @@
         <button type="button" ng-click="click.changeHeader()">change header</button>
         <button type="button" ng-click="click.changeCapitalization()">capitalize</button>
         
-        <h2 ng-dblclick="click.changeCapitalization()">{{click.header}}</h2>
+        <h2 ng-click="click.changeCapitalization()">{{click.header}}</h2>
 
     </div>
 
 
+    
+      <div ng-controller="MouseController as mouseControl">
+            <h1 ng-mousedown="mouseControl.mouseDown()">Mouse Down</h1>
+            <h1 ng-mouseup="mouseControl.mouseUp()">Mouse Up</h1>
+            <h1 ng-mouseenter="mouseControl.mouseEnter()">Mouse Enter</h1>
+            <h1 ng-mouseleave="mouseControl.mouseLeave()">Mouse Leave</h1>
+            <h1 ng-mousemove="mouseControl.mouseMove()">Mouse Move</h1>
+            <h1 ng-mouseover="mouseControl.mouseOver()">Mouse Over</h1>
+        </div>
 </body>
 
 </html>
