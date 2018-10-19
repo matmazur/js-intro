@@ -55,6 +55,12 @@
 
 
     </div>
+    
+    
+    <div ng-controller="ChangeController as change">
+            <input type="checkbox" ng-model="change.checkbox" ng-change="change.changeState()">
+            <h1>{{change.header}}</h1>
+        </div>
 </body>
 
 </html>
