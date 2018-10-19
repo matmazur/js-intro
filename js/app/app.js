@@ -11,14 +11,10 @@ app.controller('helloController', function () {
 
 app.controller('clickController', function () {
 
-
     this.header = "Starter header";
     this.changeHeader = function () {
         this.header = this.input;
     }
-
-
-
     this.changeCapitalization = function () {
 
         var character = this.header.charAt(0).toString();
@@ -75,8 +71,16 @@ app.controller("KeyController", function () {
         this.press++;
         console.log("press");
     }
+});
 
 
-
+app.controller('ChangeController', function () {
+    this.header = 'Unchecked';
+    this.changeState = function () {
+        this.header = this.checkbox? "Checked" : "Unchecked";
+    }
 
 });
+
+
+
