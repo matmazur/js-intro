@@ -10,57 +10,8 @@
 
 <body>
 
-    <div ng-controller="helloController as hello">
-        <h1>Some random text about stuff {{2+2}}</h1>
-        <p>{{hello.hello}}</p>
-        <p>{{hello.bye}}</p>
-        <input type=text ng-model="hello.sample" placeholder={{hello.hello}}>
-        <p>{{hello.sample}}</p>
-    </div>
-
-    <div ng-controller='clickController as click'>
-        <h2>angular events</h2>
-        <input type="text" ng-model="click.input">
-        <button type="button" ng-click="click.changeHeader()">change header</button>
-        <button type="button" ng-click="click.changeCapitalization()">capitalize</button>
-
-        <h2 ng-click="click.changeCapitalization()">{{click.header}}</h2>
-
-    </div>
-
-
-
-    <div ng-controller="MouseController as mouseControl">
-        <h1 ng-mousedown="mouseControl.mouseDown()">Mouse Down</h1>
-        <h1 ng-mouseup="mouseControl.mouseUp()">Mouse Up</h1>
-        <h1 ng-mouseenter="mouseControl.mouseEnter()">Mouse Enter</h1>
-        <h1 ng-mouseleave="mouseControl.mouseLeave()">Mouse Leave</h1>
-        <h1 ng-mousemove="mouseControl.mouseMove()">Mouse Move</h1>
-        <h1 ng-mouseover="mouseControl.mouseOver()">Mouse Over</h1>
-    </div>
-
-
-
-    <div ng-controller="KeyController as keys">
-
-        <input type="text" placeholder="use keys please" 
-               ng-keyup="keys.keyUp()" 
-               ng-keydown="keys.keyDown()" 
-               ng-keypress="keys.keyPress()">
-        <h1>counters</h1>
-        
-        <p>up = {{keys.up}}</p>
-        <p>down = {{keys.down}}</p>
-        <p>press = {{keys.press}}</p>
-
-
-    </div>
+   
     
-    
-    <div ng-controller="ChangeController as change">
-            <input type="checkbox" ng-model="change.checkbox" ng-change="change.changeState()">
-            <h1>{{change.header}}</h1>
-        </div>
 </body>
 
 </html>
