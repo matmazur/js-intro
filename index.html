@@ -10,8 +10,25 @@
 
 <body>
 
-   
-    
+
+    <div ng-controller="HrefController as control">
+
+        <a ng-href="https://www.youtube.com/watch?v={{control.movies[0]}}">RAP</a>
+
+        <br><br>
+        <a ng-href="https://www.youtube.com/watch?v={{control.movies[1]}}">Something about java</a>
+
+
+        <br><br>
+        <img ng-src="{{control.imgSrc[0]}}">
+        <img ng-src="{{control.imgSrc[1]}}">
+        <img ng-src="{{control.imgSrc[2]}}">
+
+
+    </div>
+
+
+
 </body>
 
 </html>

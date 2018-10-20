@@ -14,6 +14,8 @@ app.controller("HrefController", function () {
         'b-Cr0EWwaTk',
         'zg79C7XM1Xs'
     ];
-    this.imgSrc = 'https://mbtskoudsalg.com/explore/example-stamp-png/#gal_post_4538_example-stamp-png-5.png';
-
+    this.imgSrc = [
+        'https://mbtskoudsalg.com/explore/example-stamp-png/#gal_post_4538_example-stamp-png-5.png', 'https://res.cloudinary.com/demo/w_200,h_200,c_fill/basketball_shot.jpg',
+        'http://www.quirksmode.org/mobile/pix/viewport/mobile_visualviewport.jpg'
+]
 });
