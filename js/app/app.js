@@ -19,3 +19,7 @@ app.controller("HrefController", function () {
         'http://www.quirksmode.org/mobile/pix/viewport/mobile_visualviewport.jpg'
 ]
 });
+
+app.controller("ShowHideController", function () {
+
+});
