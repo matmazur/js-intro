@@ -7,4 +7,13 @@ app.controller('helloController', function () {
 });
 
 
+app.controller("HrefController", function () {
 
+
+    this.movies = [
+        'b-Cr0EWwaTk',
+        'zg79C7XM1Xs'
+    ];
+    this.imgSrc = 'https://mbtskoudsalg.com/explore/example-stamp-png/#gal_post_4538_example-stamp-png-5.png';
+
+});
