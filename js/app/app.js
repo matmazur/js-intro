@@ -36,10 +36,6 @@ app.controller('RepeatController', function () {
     new Person("Mike", "Scaramucci")
     ];
 
-});
-
-
-app.controller("ChangeStyleController", function () {
 
     this.changeToRed = function () {
         this.redStyle = {
@@ -47,5 +43,8 @@ app.controller("ChangeStyleController", function () {
         };
     }
 
+
+    this.odd = "odd";
+    this.even = "even";
 
 });

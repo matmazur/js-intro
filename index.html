@@ -10,12 +10,31 @@
 </head>
 
 <body>
-
     <div ng-controller="RepeatController as ctrl">
+
+        <h1 ng-style="ctrl.redStyle">Some header</h1>
+        <button ng-click="ctrl.changeToRed()">Click me to change to red</button>
+
         <h1>All names:</h1>
         <ul>
             <li ng-repeat="p in ctrl.people">{{p.name}} : {{p.surname}}</li>
         </ul>
+
+
+        <br>
+        <hr><br>
+
+
+        <h1>All names:</h1>
+        <ul>
+            <li ng-repeat="p in ctrl.people" ng-class-odd="'odd'" ng-class-even="'even'">{{p.name}} : {{p.surname}}</li>
+        </ul>
+
+
+        <br>
+        <hr><br>
+
+
 
         <table border="1">
             <tr>
@@ -23,23 +42,21 @@
                     <th>name</th>
                     <th>surname</th>
                 </thead>
-                <tbody ng-repeat="p in ctrl.people">
-                    <td>{{p.name}}</td>
-                    <td>{{p.surname}}</td>
+                <tbody ng-repeat="p in ctrl.people ">
+                    <tr ng-class-odd="'odd'" ng-class-even="'even'">
+                        <td>{{p.name}}</td>
+                        <td>{{p.surname}}</td>
 
-
+                    </tr>
                 </tbody>
             </tr>
         </table>
 
 
     </div>
-    
-    <div ng-controller="ChangeStyleController as ctrl">
-    <h1 ng-style="ctrl.redStyle">Some header</h1>
-        <button ng-click="ctrl.changeToRed()">Click me to change to red</button>
-    
-    </div>
+
+
+
 
 
 
