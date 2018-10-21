@@ -25,6 +25,9 @@ app.controller("ShowHideController", function () {
 
 
 app.controller('RepeatController', function () {
+    
+    this.header= "Story about a thing and some stuff"
+    
     function Person(name, surname) {
         this.name = name;
         this.surname = surname;
@@ -41,8 +44,17 @@ app.controller('RepeatController', function () {
         this.redStyle = {
             'color': 'red'
         };
+        this.isRed=true;
+    }
+    
+      this.changeToBlue = function () {
+        this.blueStyle = {
+            'color': 'blue'
+        };
+        this.isRed=false;
     }
 
+    this.isRed=false;
 
     this.odd = "odd";
     this.even = "even";
