@@ -1,40 +1,43 @@
 var app = angular.module('app', []);
 
 
-app.service("Book", function () {
+app.factory("Book", function () {
     function Book(title, author, isbn) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
     }
-    
-    this.create = function(title,author,isbn){
-        return new Book(title,author,isbn);
+
+    return Book;
+});
+
+
+app.service("bookService", function (Book) {
+
+    this.books = [
+     new Book("Moby Dick", "Hemingway", "5425DFSFGsd"),
+     new Book("Release the Dick", "Ernest", "sdfsDFD"),
+     new Book("Moby", "Moby", "^$%$3433")
+];
+
+    this.saveBook = function (book) {
+        this.books.push(book);
     }
 });
 
 
-app.controller("BookController", function (Book) {
+app.controller("BookController", function (Book, bookService) {
 
-    
-      console.log(Book);
-
-    this.books = [
-    Book.create("Moby Dick", "Hemingway", "5425DFSFGsd"),
-     Book.create("Release the Dick", "Ernest", "sdfsDFD"),
-     Book.create("Moby", "Moby", "^$%$3433")
-];
+    this.books = bookService.books;
 
     this.addBook = function (book) {
-        if (this.book.title!=null && this.book.author!=null){
-        this.books.push( Book.create(book.title, book.author, book.isbn));
+        if (this.book.title != null && this.book.author != null) {
 
-        this.book.title = "";
-        this.book.author = "";
-        this.book.isbn = "";
-    }
+            bookService.saveBook(new Book(book.title, book.author, book.isbn));
 
+            this.book.title = "";
+            this.book.author = "";
+            this.book.isbn = "";
+        }
     };
-
-
 });
