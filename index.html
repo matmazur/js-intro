@@ -5,43 +5,11 @@
     <title>HELLO ANGULAR</title>
     <script type="application/javascript" src="js/lib/angular/angular.js"></script>
     <script type="application/javascript" src="js/app/app.js"></script>
+    <link rel="stylesheet" href="js/app/style.css">
 
 </head>
 
 <body>
-
-
-    <div ng-controller="HrefController as control">
-
-        <a ng-href="https://www.youtube.com/watch?v={{control.movies[0]}}">RAP</a>
-
-        <br><br>
-        <a ng-href="https://www.youtube.com/watch?v={{control.movies[1]}}">Something about java</a>
-
-
-        <br><br>
-        <img ng-src="{{control.imgSrc[0]}}">
-        <img ng-src="{{control.imgSrc[1]}}">
-        <img ng-src="{{control.imgSrc[2]}}">
-
-    </div>
-
-
-    <div ng-controller="ShowHideController as ctrl">
-
-        <input type="text" ng-model="ctrl.text">
-        <p ng-show="ctrl.text.length">Input text : {{ctrl.text}}</p>
-        <br><br>
-        Checkbox:<input type="checkbox" ng-model="ctrl.checkbox">
-        <p ng-show="ctrl.checkbox">Show</p>
-        <p ng-hide="ctrl.checkbox">HIDE</p>
-
-
-
-
-    </div>
-
-
 
     <div ng-controller="RepeatController as ctrl">
         <h1>All names:</h1>
