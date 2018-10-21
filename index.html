@@ -5,23 +5,26 @@
     <title>HELLO ANGULAR</title>
     <script type="application/javascript" src="js/lib/angular/angular.js"></script>
     <script type="application/javascript" src="js/app/app.js"></script>
+    <script type="application/javascript" src="js/app/services.js"></script>
+    <script type="application/javascript" src="js/app/controllers.js"></script>
+
     <link rel="stylesheet" href="js/app/style.css">
 
 </head>
 
 <body>
-    
-    
-        <h1 ng-controller="constants as c">{{c.version}} {{c.appName}}</h1>
 
-    
+
+    <h1 ng-controller="constants as c">{{c.version}} {{c.appName}}</h1>
+
+
 
     <div ng-controller="BookController as ctrl">
         <ul>
             <li ng-repeat="b in ctrl.books">{{b.title}} - {{b.author}} - {{b.isbn}}</li>
         </ul>
 
-        
+
         <h1>ADD BOOK HERE</h1>
         <input type="text" placeholder="Title" ng-model="ctrl.book.title"><br />
         <input type="text" placeholder="Author" ng-model="ctrl.book.author"><br />
