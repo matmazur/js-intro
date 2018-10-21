@@ -1,28 +1,33 @@
 var app = angular.module('app', []);
 
 
-app.factory("Book", function () {
+app.service("Book", function () {
     function Book(title, author, isbn) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
     }
-    return Book;
+    
+    this.create = function(title,author,isbn){
+        return new Book(title,author,isbn);
+    }
 });
 
 
 app.controller("BookController", function (Book) {
 
+    
+      console.log(Book);
 
     this.books = [
-     new Book("Moby Dick", "Hemingway", "5425DFSFGsd"),
-     new Book("Release Dick", "Ernest", "sdfsDFD"),
-     new Book("Moby", "Moby", "^$%$3433")
+    Book.create("Moby Dick", "Hemingway", "5425DFSFGsd"),
+     Book.create("Release the Dick", "Ernest", "sdfsDFD"),
+     Book.create("Moby", "Moby", "^$%$3433")
 ];
 
     this.addBook = function (book) {
         if (this.book.title!=null && this.book.author!=null){
-        this.books.push(new Book(book.title, book.author, book.isbn));
+        this.books.push( Book.create(book.title, book.author, book.isbn));
 
         this.book.title = "";
         this.book.author = "";
