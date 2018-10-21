@@ -10,56 +10,7 @@
 </head>
 
 <body>
-    <div ng-controller="RepeatController as ctrl">
-
-        <h1 ng-style="ctrl.redStyle" ng-hide="ctrl.isRed==false">{{ctrl.header}} in red</h1>
-        <h1 ng-style="ctrl.blueStyle" ng-hide="ctrl.isRed==true" >{{ctrl.header}}</h1>
-
-        <button ng-click="ctrl.changeToRed()" ng-hide="ctrl.isRed==true">Click me to change to red</button>
-        <button ng-click="ctrl.changeToBlue()" ng-hide="ctrl.isRed==false">Click me to change to blue</button>
-
-        <h1>All names:</h1>
-        <ul>
-            <li ng-repeat="p in ctrl.people">{{p.name}} : {{p.surname}}</li>
-        </ul>
-
-
-        <br>
-        <hr><br>
-
-
-        <h1>All names:</h1>
-        <ul>
-            <li ng-repeat="p in ctrl.people" ng-class-odd="'odd'" ng-class-even="'even'">{{p.name}} : {{p.surname}}</li>
-        </ul>
-
-
-        <br>
-        <hr><br>
-
-
-
-        <table border="1">
-            <tr>
-                <thead>
-                    <th>name</th>
-                    <th>surname</th>
-                </thead>
-                <tbody ng-repeat="p in ctrl.people ">
-                    <tr ng-class-odd="'odd'" ng-class-even="'even'">
-                        <td>{{p.name}}</td>
-                        <td>{{p.surname}}</td>
-
-                    </tr>
-                </tbody>
-            </tr>
-        </table>
-
-
-    </div>
-
-
-
+   
 
 
 
