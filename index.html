@@ -43,6 +43,36 @@
 
 
 
+    <div ng-controller="RepeatController as ctrl">
+        <h1>All names:</h1>
+        <ul>
+            <li ng-repeat="p in ctrl.people">{{p.name}} : {{p.surname}}</li>
+        </ul>
+
+        <table border="1">
+            <tr>
+                <thead>
+                    <th>name</th>
+                    <th>surname</th>
+                </thead>
+                <tbody ng-repeat="p in ctrl.people">
+                    <td>{{p.name}}</td>
+                    <td>{{p.surname}}</td>
+
+
+                </tbody>
+            </tr>
+        </table>
+
+
+    </div>
+    
+    <div ng-controller="ChangeStyleController as ctrl">
+    <h1 ng-style="ctrl.redStyle">Some header</h1>
+        <button ng-click="ctrl.changeToRed()">Click me to change to red</button>
+    
+    </div>
+
 
 
 </body>

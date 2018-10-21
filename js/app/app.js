@@ -6,7 +6,6 @@ app.controller('helloController', function () {
     this.bye = "goodbye homie";
 });
 
-
 app.controller("HrefController", function () {
 
 
@@ -21,5 +20,32 @@ app.controller("HrefController", function () {
 });
 
 app.controller("ShowHideController", function () {
+
+});
+
+
+app.controller('RepeatController', function () {
+    function Person(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
+    this.people = [
+        new Person("Jack", "Stronk"),
+    new Person("Jonah", "Heel"),
+    new Person("Mike", "Scaramucci")
+    ];
+
+});
+
+
+app.controller("ChangeStyleController", function () {
+
+    this.changeToRed = function () {
+        this.redStyle = {
+            'color': 'red'
+        };
+    }
+
 
 });
