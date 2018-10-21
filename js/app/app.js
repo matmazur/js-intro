@@ -1,5 +1,7 @@
 var app = angular.module('app', []);
 
+app.value("appName","Book Store");
+app.constant("version","0.1");
 
 app.factory("Book", function () {
     function Book(title, author, isbn) {
@@ -40,4 +42,12 @@ app.controller("BookController", function (Book, bookService) {
             this.book.isbn = "";
         }
     };
+});
+
+
+app.controller("constants",function(appName,version){
+   
+    this.version=version;
+    this.appName=appName;
+    
 });

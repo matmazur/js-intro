@@ -10,13 +10,18 @@
 </head>
 
 <body>
+    
+    
+        <h1 ng-controller="constants as c">{{c.version}} {{c.appName}}</h1>
 
+    
 
     <div ng-controller="BookController as ctrl">
         <ul>
             <li ng-repeat="b in ctrl.books">{{b.title}} - {{b.author}} - {{b.isbn}}</li>
         </ul>
 
+        
         <h1>ADD BOOK HERE</h1>
         <input type="text" placeholder="Title" ng-model="ctrl.book.title"><br />
         <input type="text" placeholder="Author" ng-model="ctrl.book.author"><br />
