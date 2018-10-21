@@ -10,8 +10,15 @@
 </head>
 
 <body>
-   
 
+
+    <div ng-controller="BookController as ctrl">
+        <ul>
+            <li ng-repeat="b in ctrl.books">{{b.title}} - {{b.author}} - {{b.isbn}}</li>
+        </ul>
+    </div>
+
+    
 
 
 </body>
