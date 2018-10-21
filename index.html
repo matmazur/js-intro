@@ -16,9 +16,14 @@
         <ul>
             <li ng-repeat="b in ctrl.books">{{b.title}} - {{b.author}} - {{b.isbn}}</li>
         </ul>
-    </div>
 
-    
+        <h1>ADD BOOK HERE</h1>
+        <input type="text" placeholder="Title" ng-model="ctrl.book.title"><br />
+        <input type="text" placeholder="Author" ng-model="ctrl.book.author"><br />
+        <input type="text" placeholder="ISBN" ng-model="ctrl.book.isbn"><br />
+        <button ng-click="ctrl.addBook(ctrl.book)">Add Book</button>
+
+    </div>
 
 
 </body>

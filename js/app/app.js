@@ -1,6 +1,6 @@
 var app = angular.module('app', []);
 
-app.controller("BookController", function() {
+app.controller("BookController", function () {
 
     function Book(title, author, isbn) {
         this.title = title;
@@ -16,6 +16,9 @@ app.controller("BookController", function() {
      new Book("Moby", "Moby", "^$%$3433")
 ];
 
+    this.addBook = function(book) {
+        this.books.push(new Book(book.title,book.author,book.isbn));
+    };
 
 
 });
